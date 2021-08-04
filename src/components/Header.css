@@ -1,0 +1,34 @@
+header {
+    position: fixed; /*Para não empurrar o conteúdo para baixo*/
+    z-index: 999; /*para manter ele sobre tudo realmente*/
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between; /*Para que um conteúdo fique na esquerda e o outro na direita*/
+    align-items: center; /*centralizar os itens verticalmente dentro do header*/
+    padding: 0 30px;
+    background: transparent;
+    transition: all ease 0.5s;
+}
+
+header.black {
+    background-color: #141414;
+}
+
+.header--logo {
+    height: 30px;
+}
+.header--logo img {
+    height: 100%;
+}
+
+.header--user {
+    height: 35px;
+}
+
+.header--user img {
+    height: 100%;
+    border-radius: 3px;
+}

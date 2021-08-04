@@ -1,0 +1,120 @@
+.featured{
+    height: 100vh; /*toda a altura do monitor */
+}
+
+.featured--vertical {
+    width: inherit; 
+    height: inherit; /*inherit significa que vai herdar do pai a altura e largura, no caso o .featured*/
+    background: linear-gradient(to top, #111 10%, transparent 90%); /*cria um gradiente preto de cima pra baixo com em cima transparente e embaixo preto */
+}
+
+.featured--horizontal {
+    width: inherit; 
+    height: inherit;
+    background: linear-gradient(to right, #111 30%, transparent 70%); /*cria um gradiente preto de cima pra baixo com em cima transparente e embaixo preto */
+    /*alinhas a div toda no meio verticalmente e colocar em um pouco para a direita*/
+    display: flex;
+    flex-direction: column; /*para manter os itens um abaixo do outro*/
+    justify-content: center; /*para colocar no meio da tela verticalmente*/
+    padding-left: 30px;
+    padding-bottom: 150px; /*compensar o margin-top: 150px da lista de filmes para que não aconteça de um ficar em cima do outro*/
+    padding-top: 70px; /*compensar o tamanho do header*/
+}
+
+.featured--name {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.featured--info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.featured--points,
+.featured--year,
+.featured--seasons {
+    display: inline-block; /*coloca a div em linha (em linha) e em block (que posibilita add margin, padding, etc..) */
+    margin-right: 15px;
+}
+
+.featured--points {
+    color: #43d369;
+}
+
+.featured--description {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.featured--buttons {
+    margin-top: 15px;
+}
+
+.featured--watchbutton,
+.featured--mylistbutton {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px; /*padding 15 em cima e em baixo e 25 de cada lado */
+    border-radius: 5px; /* borda redonda em 5px */
+    text-decoration: none; /*Retira o sublinhado do link */
+    margin-right: 10px;
+    /*gerar efeito de passar o mouse e ele ficar mais claro/escuro*/
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+
+.featured--watchbutton:hover,
+.featured--mylistbutton:hover {
+    opacity: 0.7; /*70%*/
+}
+
+
+.featured--watchbutton {
+    background-color: #FFF;
+    color: #000;
+}
+
+.featured--mylistbutton {
+    background-color: #333;
+    color: #FFF;
+}
+
+.featured--genres {
+    margin-top: 15px;
+    font-size: 19px;
+    color: #999;
+}
+
+@media (max-width:760px) {
+    .featured {
+        height: 90vh;
+    }
+
+    .featured--name{
+        font-size: 40px;
+    }
+
+    .featured--info {
+        font-size: 16px;
+    }
+
+    .featured--description {
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+
+    .featured--watchbutton,
+    .featured--mylistbutton {
+        font-size: 16px;
+    }
+
+    .featured--genres {
+        font-size: 14px;
+    }
+}
